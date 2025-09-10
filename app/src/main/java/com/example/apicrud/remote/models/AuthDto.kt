@@ -12,4 +12,18 @@ data class AuthDto(
     val accessToken: String,
     val refreshToken: String
 
-)
+){
+    companion object {
+        val EMPTY = AuthDto(
+            id = "",
+            username = "",
+            email = "",
+            firstName = "",
+            lastName = "",
+            gender = "",
+            image = "",
+            accessToken = "",
+            refreshToken = ""
+        )
+    }
+}

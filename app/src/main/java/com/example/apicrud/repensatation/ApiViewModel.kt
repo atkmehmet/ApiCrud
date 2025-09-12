@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.apicrud.model.Repository.ILoginRepository
 import com.example.apicrud.remote.models.AuthDto
 import com.example.apicrud.remote.models.Login
+import com.example.apicrud.remote.models.Self
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -18,6 +19,7 @@ class ApiViewModel @Inject constructor(
 ) :ViewModel() {
 
     var dto by mutableStateOf(AuthDto.EMPTY)
+    var selfDto by mutableStateOf(Self.EMPTY)
 
     init {
         viewModelScope.launch {
@@ -27,6 +29,9 @@ class ApiViewModel @Inject constructor(
                     password = "emilyspass"
                 )
             )
+
+            selfDto = repository.getSelf(dto.accessToken)
+
         }
 
     }

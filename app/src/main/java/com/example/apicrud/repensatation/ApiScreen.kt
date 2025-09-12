@@ -15,7 +15,7 @@ fun ApiScreen(
     Column(modifier = Modifier.fillMaxSize()
         ) {
 
-        Text(text = viewModel.dto.accessToken)
+        Text(text = viewModel.selfDto.email)
 
     }
 }

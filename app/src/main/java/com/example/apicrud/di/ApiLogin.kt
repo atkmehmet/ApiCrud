@@ -1,6 +1,6 @@
 package com.example.apicrud.di
 
-import com.example.apicrud.remote.apiRequest
+import com.example.apicrud.remote.apis.apiRequest
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -24,7 +24,7 @@ class ApiLogin {
 
     @Singleton
     @Provides
-    fun createService(retrofit: Retrofit):apiRequest{
+    fun createService(retrofit: Retrofit): apiRequest {
         return retrofit.create(apiRequest::class.java)
     }
 }

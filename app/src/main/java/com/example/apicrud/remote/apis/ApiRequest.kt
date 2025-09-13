@@ -1,4 +1,4 @@
-package com.example.apicrud.remote
+package com.example.apicrud.remote.apis
 
 import com.example.apicrud.remote.models.AuthDto
 import com.example.apicrud.remote.models.Login

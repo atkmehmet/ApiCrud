@@ -13,14 +13,14 @@ data class products(
    val brand: String,
    val sku: String,
    val weight: Int,
-   val dimensions: List<dimensions>,
+   val dimensions: dimensions,
    val warrantyInformation: String,
    val shippingInformation: String,
    val availabilityStatus: String,
    val reviews:List<reviews>,
    val returnPolicy: String,
    val minimumOrderQuantity: String,
-   val meta:List<meta>,
+   val meta:meta,
    val thumbnail: String,
    val images:List<String>
 )

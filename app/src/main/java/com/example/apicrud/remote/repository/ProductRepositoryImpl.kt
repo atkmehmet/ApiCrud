@@ -9,30 +9,30 @@ class ProductRepositoryImpl(
     private val apiProduct: apiProduct
 ):ProductRepository {
     override suspend fun getProducts(): productsResponse {
-        TODO("Not yet implemented")
+        return apiProduct.getProducts()
     }
 
     override suspend fun getProductSearch(searchString: String): productsResponse {
-        TODO("Not yet implemented")
+        return apiProduct.getProductSearch(searchString)
     }
 
     override suspend fun getProductsLimit(limit: Int, skip: Int, select: String): productsResponse {
-        TODO("Not yet implemented")
+       return apiProduct.getProductsLimit(limit,skip,select)
     }
 
     override suspend fun getProductOrders(sortBy: String, order: String): productsResponse {
-        TODO("Not yet implemented")
+        return apiProduct.getProductOrders(sortBy,order)
     }
 
     override suspend fun addProducts(products: products): products {
-        TODO("Not yet implemented")
+        return apiProduct.addProducts(products)
     }
 
     override suspend fun updateProducts(tile: String): products {
-        TODO("Not yet implemented")
+        return apiProduct.updateProducts(tile)
     }
 
     override suspend fun deleteProducts(): products {
-        TODO("Not yet implemented")
+        return apiProduct.deleteProducts()
     }
 }

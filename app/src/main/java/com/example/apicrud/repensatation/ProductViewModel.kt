@@ -19,9 +19,15 @@ class ProductViewModel @Inject constructor (
     var product by mutableStateOf<products?>(null)
     var products by mutableStateOf<productsResponse?>(null)
 
+    var productList by mutableStateOf<List<products>>(emptyList())
+
     init {
         viewModelScope.launch {
-           product = repository.deleteProducts()
+           //product = repository.deleteProducts()
+
+            products = repository.getProducts()
+
+            productList = products!!.products
         }
 
     }

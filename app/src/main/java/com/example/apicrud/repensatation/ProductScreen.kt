@@ -11,7 +11,11 @@ import androidx.hilt.navigation.compose.hiltViewModel
 fun productScreen(viewModel: ProductViewModel = hiltViewModel()){
     Column(modifier = Modifier.fillMaxSize()) {
 
-        viewModel.product?.title?.let { Text(text = it) }
-
+      //  viewModel.product?.title?.let { Text(text = it) }
+           
+        viewModel.productList.forEach { 
+            Text(text = it.title)
+            Text(text = it.dimensions.height.toString())
+        }
     }
 }
